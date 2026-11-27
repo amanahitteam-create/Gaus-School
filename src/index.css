@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -108,4 +108,25 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+} */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-900: #0b3d24;
+  --color-brand-800: #0f4a2c;
+  --color-brand-700: #145a35;
+  --color-brand-600: #1b6b41;
+  --color-gold-500: #d4a72c;
+  --color-gold-400: #e0b63f;
+  --color-cream: #f6f2e9;
+  --color-ink: #16231b;
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-serif; }
+  [id] { scroll-margin-top: 1rem; }
 }
